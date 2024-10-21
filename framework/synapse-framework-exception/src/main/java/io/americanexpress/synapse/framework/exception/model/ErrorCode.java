@@ -66,7 +66,12 @@ public enum ErrorCode {
     /**
      * Used for when the consumer makes a request to a locked resource.
      */
-    LOCKED(HttpStatus.LOCKED, "Locked.");
+    LOCKED(HttpStatus.LOCKED, "Locked."),
+
+    /**
+     * Used for when the consumer makes a request with change in the Entity State.
+     */
+    STATE_CONFLICT(HttpStatus.CONFLICT, "Entity Conflict.");
 
     /**
      * Gets the HttpStatus of the ErrorCode.
